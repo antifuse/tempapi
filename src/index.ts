@@ -5,7 +5,8 @@ const s = sensor.promises;
 const app = express();
 
 app.get("/temp", (req, res) => {
-    s.read(11, 4).then( t => {
+    //@ts-ignore
+    s.read(11, parseInt(req.params.p) || 4).then( t => {
         res.send(t);
     });
 });
