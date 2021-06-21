@@ -6,7 +6,7 @@ const app = express();
 
 app.get("/temp", (req, res) => {
     //@ts-ignore
-    s.read(11, parseInt(req.params.p) || 4).then( t => {
+    s.read(22, parseInt(req.params.p) || 4).then( t => {
         res.send(t);
     });
 });
